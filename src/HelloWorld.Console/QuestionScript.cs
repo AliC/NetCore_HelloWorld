@@ -2,19 +2,19 @@
 {
     public class QuestionScript
     {
-        private IConversation _conversation;
+        private IConverser _converser;
 
-            public QuestionScript(IConversation conversation)
-            {
-                _conversation = conversation;
-            }
+        public QuestionScript(IConverser converser)
+        {
+            _converser = converser;
+        }
 
         public void Go()
         {
-            var name = _conversation.AskName();
-            _conversation.LineFeed();
-            _conversation.SayHello(name);
-            _conversation.LineFeed();
+            var name = _converser.AskName();
+            _converser.LineFeed();
+            _converser.SayHello(name);
+            _converser.LineFeed();
         }
     }
 }

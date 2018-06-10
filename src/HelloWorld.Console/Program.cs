@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            IConversation conversation = null;
+            IConverser conversation = null;
             var questionScript = new QuestionScript(conversation);
             questionScript.Go();
         }

@@ -6,7 +6,7 @@
         {
         }
 
-        public string Ask(string question)
+        public string Say(string question)
         {
             throw new System.NotImplementedException();
         }

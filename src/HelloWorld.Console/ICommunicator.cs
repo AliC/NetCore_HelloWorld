@@ -2,7 +2,7 @@
 {
     public interface ICommunicator
     {
-        string Ask(string question);
+        string Say(string words);
         void LineFeed();
     }
 }

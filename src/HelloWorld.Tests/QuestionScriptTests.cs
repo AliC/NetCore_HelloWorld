@@ -14,20 +14,20 @@ namespace HelloWorld.Tests
         {
             string expectedName = _fixture.Create<string>();
 
-            var conversationService = new Mock<IConversation>(MockBehavior.Strict);
+            var converser = new Mock<IConverser>(MockBehavior.Strict);
 
             var sequence = new MockSequence();
-            conversationService.InSequence(sequence).Setup(c => c.AskName()).Returns(expectedName);
-            conversationService.InSequence(sequence).Setup(c => c.LineFeed());
-            conversationService.InSequence(sequence).Setup(c => c.SayHello(expectedName));
-            conversationService.InSequence(sequence).Setup(c => c.LineFeed());
+            converser.InSequence(sequence).Setup(c => c.AskName()).Returns(expectedName);
+            converser.InSequence(sequence).Setup(c => c.LineFeed());
+            converser.InSequence(sequence).Setup(c => c.SayHello(expectedName));
+            converser.InSequence(sequence).Setup(c => c.LineFeed());
 
-            var script = new QuestionScript(conversationService.Object);
+            var script = new QuestionScript(converser.Object);
             script.Go();
 
-            conversationService.Verify(c => c.AskName(), Times.Once);
-            conversationService.Verify(c => c.SayHello(expectedName), Times.Once);
-            conversationService.Verify(c => c.LineFeed(), Times.Exactly(2));
+            converser.Verify(c => c.AskName(), Times.Once);
+            converser.Verify(c => c.SayHello(expectedName), Times.Once);
+            converser.Verify(c => c.LineFeed(), Times.Exactly(2));
         }
     }
 }
