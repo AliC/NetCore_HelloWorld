@@ -16,7 +16,7 @@ namespace HelloWorld.Tests
             var talker = new Conversation(communicator);
             talker.AskName();
 
-            Mock.Get(communicator).Verify(x => x.Ask(expectedQuestion), Times.Once);
+            Mock.Get(communicator).Verify(x => x.Say(expectedQuestion), Times.Once);
         }
     }
 }

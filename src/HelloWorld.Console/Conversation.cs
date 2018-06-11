@@ -13,7 +13,7 @@ namespace HelloWorld.Console
 
         public string AskName()
         {
-            return _communicator.Ask("What is your name?");
+            return _communicator.Say("What is your name?");
         }
 
         public void LineFeed()
