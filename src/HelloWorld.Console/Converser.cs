@@ -4,11 +4,13 @@ namespace HelloWorld.Console
 {
     public class Converser : IConverser
     {
-        private ICommunicator _communicator;
+        private readonly ICommunicator _communicator;
+        private readonly ITimeService _timeService;
 
-        public Converser(ICommunicator communicator)
+        public Converser(ICommunicator communicator, ITimeService timeService)
         {
             _communicator = communicator;
+            _timeService = timeService;
         }
 
         public string AskName()
@@ -23,11 +25,7 @@ namespace HelloWorld.Console
 
         public void SayHello(string name)
         {
-
-            var now = DateTime.Now;
-            //string date = now.Date;
-            //string time = now.TimeOfDay;
-            //Console.WriteLine($"Hello, {name}, on {date} at {time}");
+            _communicator.Say($"Hello, {name}, on {_timeService.Date} at {_timeService.Time}!");
         }
     }
 }

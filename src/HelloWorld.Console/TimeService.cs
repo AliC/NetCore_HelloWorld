@@ -6,7 +6,12 @@ namespace HelloWorld.Console
     {
         private DateTime? _now;
 
-        public TimeService(DateTime now)
+        public TimeService() : this(null)
+        {
+            
+        }
+
+        public TimeService(DateTime? now)
         {
             _now = now;
         }
@@ -23,14 +28,8 @@ namespace HelloWorld.Console
             }
         }
 
-        public string Date()
-        {
-            return Now.Date.ToShortDateString();
-        }
+        public string Date => Now.Date.ToShortDateString();
 
-        public string Time()
-        {
-            return Now.ToString("h:m tt");
-        }
+        public string Time => Now.ToString("h:mm tt");
     }
 }
