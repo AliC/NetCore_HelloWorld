@@ -75,7 +75,7 @@ namespace HelloWorld.Tests
         {
             var now = new DateTime(2017, 10, 14, 17, 35, 0);
             var timeService = new TimeService();
-            var expectedDateFormat = "^([1-31]|[1-2][0-9]|[3][0-1])\\([1-9]|[1][0-2]\\/d{4})$";
+            var expectedDateFormat = @"^([1-9]|[1-2][0-9]|[3][0-1])\/([1-9]|1[0-2])\/(\d{4})$";
 
             var actualDate = timeService.Date;
 

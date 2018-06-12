@@ -28,7 +28,7 @@ namespace HelloWorld.Console
             }
         }
 
-        public string Date => Now.Date.ToShortDateString();
+        public string Date => Now.Date.ToString("d/M/yyyy");
 
         public string Time => Now.ToString("h:mm tt");
     }
