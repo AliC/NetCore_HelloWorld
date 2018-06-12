@@ -3,21 +3,27 @@ using System;
 
 namespace HelloWorld.Console
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            ServiceProvider provider = DependencyInjection(args);
+
+            var questionScript = new QuestionScript(provider.GetService<IConverser>());
+            questionScript.Go();
+
+        }
+
+        private static ServiceProvider DependencyInjection(string[] args)
+        {
+            var now = args.Length == 1 ? DateTime.Parse(args[0]) : (DateTime?)null;
+
             var services = new ServiceCollection();
             services.AddTransient<IConverser, Converser>();
             services.AddTransient<ICommunicator, ConsoleCommunicator>();
-            services.AddTransient<ITimeService, TimeService>();
-            var provider = services.BuildServiceProvider();
+            services.AddTransient<ITimeService, TimeService>(t => new TimeService(now));
 
-            var converser = provider.GetService<IConverser>();
-            
-            var questionScript = new QuestionScript(converser);
-            questionScript.Go();
-
+            return services.BuildServiceProvider();
         }
     }
 }

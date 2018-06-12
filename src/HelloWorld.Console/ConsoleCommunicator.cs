@@ -4,17 +4,13 @@
     {
         public string Say(string question)
         {
-            throw new System.NotImplementedException();
-
-            //System.Console.WriteLine(question);
-            //return System.Console.ReadLine();
+            System.Console.WriteLine(question);
+            return System.Console.ReadLine();
         }
 
         public void LineFeed()
         {
-            throw new System.NotImplementedException();
-
-            //System.Console.WriteLine();
+            System.Console.WriteLine();
         }
     }
 }
