@@ -12,7 +12,7 @@ namespace HelloWorld.Tests.Acceptance
         {
             string expectedQuestion = "What is your name?";
             string expectedName = "Alastair";
-            string expectedGreeting = $"Hello, {expectedName}, on 14/10/2017 at 5:35 PM!{Environment.NewLine}{Environment.NewLine}";
+            string expectedGreeting = $"Hello, {expectedName}, on 14/10/2017 at 5:35 PM!";
 
             using (var writer = new StringWriter())
             {
@@ -26,9 +26,8 @@ namespace HelloWorld.Tests.Acceptance
                 }
 
                 Assert.StartsWith(expectedQuestion, writer.ToString());
-                Assert.EndsWith(expectedGreeting, writer.ToString());
+                Assert.Contains(expectedGreeting, writer.ToString());
             }
-
         }
     }
 }
