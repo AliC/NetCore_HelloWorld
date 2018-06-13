@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\HelloWorld.Console\HelloWorld.Console.csproj" />
+    <ProjectReference Include="..\HelloWorld.Console\HelloWorld.Console.csproj" />
   </ItemGroup>
 
 </Project>
