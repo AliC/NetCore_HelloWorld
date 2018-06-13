@@ -1,0 +1,16 @@
+
+
+- next up
+  - deploy console app to azure
+    - resources
+	  - https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/azure-apps/?view=aspnetcore-2.1
+	  - https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet
+
+- todo
+  - host hello world web app in azure
+  - CI / CD
+    - run tests as part of CI
+
+
+- complete
+  - hello world console app with test coverage
