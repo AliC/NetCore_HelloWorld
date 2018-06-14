@@ -1,0 +1,19 @@
+"dotnet" exec
+    --runtimeconfig "C:\Dev\LearningDotNetCore\NetCore_FirstAzureWebApp\src\FirstAzureWebApp.Web\bin\Release\netcoreapp2.0\FirstAzureWebApp.Web.runtimeconfig.json"
+    --depsfile "C:\Dev\LearningDotNetCore\NetCore_FirstAzureWebApp\src\FirstAzureWebApp.Web\bin\Release\netcoreapp2.0\FirstAzureWebApp.Web.deps.json"
+    
+    "C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.razor.viewcompilation\2.0.4\build\netstandard2.0\Microsoft.AspNetCore.Mvc.Razor.ViewCompilation.dll"
+    @"obj\Release\netcoreapp2.0\microsoft.aspnetcore.mvc.razor.viewcompilation.rsp"
+
+P1 folder: C:\Dev\LearningDotNetCore\NetCore_FirstAzureWebApp\src\FirstAzureWebApp.Web\bin\Release\netcoreapp2.0
+P1 file: FirstAzureWebApp.Web.runtimeconfig.json
+P2 folder: C:\Dev\LearningDotNetCore\NetCore_FirstAzureWebApp\src\FirstAzureWebApp.Web\bin\Release\netcoreapp2.0
+P2 file: FirstAzureWebApp.Web.deps.json
+P3 folder: C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.razor.viewcompilation\2.0.4\build\netstandard2.0\
+P3 file: Microsoft.AspNetCore.Mvc.Razor.ViewCompilation.dll
+P4 folder: obj\Release\netcoreapp2.0\microsoft.aspnetcore.mvc.razor.viewcompilation.rsp
+P4 file: microsoft.aspnetcore.mvc.razor.viewcompilation.rsp
+
+--------------------
+
+dotnet exec --runtimeconfig .\bin\Release\netcoreapp2.0\FirstAzureWebApp.Web.runtimeconfig.dev.json --depsfile .\bin\Release\netcoreapp2.0\FirstAzureWebApp.Web.deps.json "C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.razor.viewcompilation\2.0.4\build\netstandard2.0\Microsoft.AspNetCore.Mvc.Razor.ViewCompilation.dll" "obj\Release\netcoreapp2.0\microsoft.aspnetcore.mvc.razor.viewcompilation.rsp"
