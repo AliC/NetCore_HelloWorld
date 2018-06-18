@@ -1,0 +1,3 @@
+List of URLs that look interesting
+
+- Azure Cloud: https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart-powershell
